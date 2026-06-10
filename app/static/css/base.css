@@ -1,0 +1,43 @@
+/*
+Reset
+*/
+*{
+    margin:0;
+    padding: 0;
+    border: 1px solid #ccc;
+    font-size: 62.5%;
+}
+a{
+    text-decoration: none;
+    padding: 0.25rem;
+}
+/*
+Header
+*/
+header{
+    background: hsl(170,50%,50%);
+    color: white;
+    padding: 0.30rem;
+    border-top-right-radius: 0.80rem;
+    border-top-left-radius: 0.80rem;
+}
+h1{
+    font-size: 3rem;
+    text-align: center;
+}
+.menu-header{
+    display:inline-flex;
+    justify-content: center;
+}
+.menu-header ul {
+    display: flex;
+    justify-content: center;
+}
+.menu-header li{
+    padding: 0.30rem;
+    font-size: 2.4rem;
+    list-style-type: none;
+    & a{
+        border: none;
+    }
+}

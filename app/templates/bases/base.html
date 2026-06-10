@@ -1,14 +1,62 @@
+<!-- Tag que indica que este documento é HTML5-->
 <!DOCTYPE html>
+
+<!--Inicio do Html -->
 <html lang="en">
+<!--Inicio do Head -->
+
 <head>
+    <!--Inicio das tag Meta -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tag que conecta o style da page-->
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/base.css") }}">
+
+    <!--Inicio do Title -->
     <title>
         {% block title %}
             Base
         {% endblock %}
     </title>
+    <!--Final do Title -->
+
 </head>
+<!--Final do Head -->
+
+<!--Inicio do Body -->
 <body>
 
+<!--Inicio do Header -->
+<header>
+    <!--Titulo de Maior nivel da Página-->
+    <h1>
+        {% block h1 %}
+            Titulo Base
+        {% endblock %}
+    </h1>
+
+    <!--Inicio do Nav menu-->
+    <nav class="menu-header">
+
+        <!--Inicio do Ul  -->
+        <ul>
+            <li>
+                <a href="#">Cadastrar itens</a>
+            </li>
+            <li><a href="#">Lista de itens</a></li>
+            <li><a href="#">Infomação de itens</a></li>
+        </ul>
+
+        <form>
+            <input type="text">
+        </form>
+    </nav>
+
+</header>
+<!--Final do Header -->
+
 </body>
+<!--Final do Body -->
+
 </html>
+<!--Final do Html -->
