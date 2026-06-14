@@ -83,7 +83,7 @@ main {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    padding: 0.5rem;
+    padding: 0.30rem;
     width: 97.25%;
     height: 75.0rem;
 }
@@ -95,7 +95,7 @@ main {
 }
 
 .main-section1 {
-    width: 65%;
+    width: 80%;
     margin: 0.25rem;
     padding: 0.3rem;
 

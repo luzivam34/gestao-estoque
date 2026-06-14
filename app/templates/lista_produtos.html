@@ -1,9 +1,8 @@
-<!--Pedido da extensão do arquivo -->
 {% extends "bases/base.html" %}
 
 <!--Bloco que faz menção ao Título -->
 {% block title %}
-    Gestão de Estoque
+    Lista de Produtos
 {% endblock %}
 
 <!--Bloco que faz menção ao Título de maior nível -->
@@ -13,8 +12,9 @@
 
 <!--Bloco que faz menção ao nav_header -->
 {% block nav_header %}
+
     <ul>
-        <li><a href="#">item 1 base</a></li>
+        <li><a href="{{ url_for("mainbp.index") }}">Home</a></li>
         <li><a href="#">item 2 base</a></li>
         <li><a href="#">item 3 base</a></li>
         <li><a href="#">item 4 base</a></li>
@@ -26,13 +26,32 @@
 {% block menu_principal %}
     <ul>
         <li><a href="{{ url_for("produtobp.cadastro_produtos") }}">Cadastrar Produtos</a></li>
-        <li><a href="{{ url_for("produtobp.lista_produtos") }}">Lista de Produtos</a></li>
     </ul>
 {% endblock %}
 
 <!--Block que faça menção a Section1 -->
 {% block section1 %}
     <!-- titilo nível 2 -->
-    <h2>Ponto de Atenção</h2>
+    <h2>Lista de Produtos</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Quantidade</th>
+            <th>Valor</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in produtos %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.nome }}</td>
+                <td>{{ item.quantidade }}</td>
+                <td>{{ item.valor }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
 {% endblock %}

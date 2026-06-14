@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--Link do google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
@@ -24,6 +25,7 @@
             Base
         {% endblock %}
     </title>
+
     <!--Final do Title -->
 
 </head>
@@ -43,22 +45,18 @@
 
     <!--Inicio do Nav menu-->
     <nav class="menu-header">
+        {% block nav_header %}
+
+            <ul>
+                <li><a href="#">item 1 base</a></li>
+                <li><a href="#">item 2 base</a></li>
+                <li><a href="#">item 3 base</a></li>
+                <li><a href="#">item 4 base</a></li>
+                <li><a href="#">item 5 base</a></li>
+            </ul>
+        {% endblock %}
 
         <!--Inicio do Ul  -->
-        <ul>
-            <li>
-                <a href="#">Cadastrar itens</a>
-            </li>
-            <li><a href="#">Lista de itens</a></li>
-            <li><a href="#">Infomação de itens</a></li>
-        </ul>
-
-        <!--
-        Busca
-        <form>
-            <input type="text">
-        </form>
-        -->
     </nav>
 
 </header>
@@ -66,17 +64,22 @@
 
 <!-- Inicio Main -->
 <main>
+
+    <!--inicio da menu no Main -->
     <div id="menu-main">
         <h5>Menu Principal</h5>
-        <ul>
-            <li><a href="#">Cadastrar Produtos</a></li>
-        </ul>
+        {% block menu_principal %}
+
+        {% endblock %}
     </div>
 
     <!-- Inicio Section1 -->
     <section class="main-section1">
-        <!-- titilo nível 2 -->
-        <h2>Ponto de Atenção</h2>
+        {% block section1 %}
+            <!-- titilo nível 2 -->
+            <h2>Titulo nivel 2 base</h2>
+
+        {% endblock %}
 
     </section>
     <!-- Final Section1 -->

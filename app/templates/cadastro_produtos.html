@@ -1,9 +1,8 @@
-<!--Pedido da extensão do arquivo -->
 {% extends "bases/base.html" %}
 
 <!--Bloco que faz menção ao Título -->
 {% block title %}
-    Gestão de Estoque
+    Cadastro de Produto
 {% endblock %}
 
 <!--Bloco que faz menção ao Título de maior nível -->
@@ -11,10 +10,11 @@
     Gestão de Estoque
 {% endblock %}
 
+
 <!--Bloco que faz menção ao nav_header -->
 {% block nav_header %}
     <ul>
-        <li><a href="#">item 1 base</a></li>
+        <li><a href="{{ url_for("mainbp.index") }}">Home</a></li>
         <li><a href="#">item 2 base</a></li>
         <li><a href="#">item 3 base</a></li>
         <li><a href="#">item 4 base</a></li>
@@ -22,10 +22,10 @@
     </ul>
 {% endblock %}
 
+
 <!--Block que faça menção ao menu no Main -->
 {% block menu_principal %}
     <ul>
-        <li><a href="{{ url_for("produtobp.cadastro_produtos") }}">Cadastrar Produtos</a></li>
         <li><a href="{{ url_for("produtobp.lista_produtos") }}">Lista de Produtos</a></li>
     </ul>
 {% endblock %}
@@ -33,6 +33,25 @@
 <!--Block que faça menção a Section1 -->
 {% block section1 %}
     <!-- titilo nível 2 -->
-    <h2>Ponto de Atenção</h2>
+    <h2>Cadastrar Produtos</h2>
+
+    <form method="post" enctype="multipart/form-data">
+    <label>
+        Nome:
+        <input type="text" name="nome" placeholder="Nome">
+    </label>
+        <br>
+    <label>
+        Quantidade:
+        <input type="number" name="quantidade" placeholder="0">
+    </label>
+        <br>
+    <label>
+        Preço:
+        <input type="number" name="valor" placeholder="0.00" step="0.01">
+    </label>
+    <input type="submit" value="Cadastrar">
+
+    </form>
 
 {% endblock %}
